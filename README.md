@@ -2,7 +2,7 @@
 
 Browse top stories from HackerNews without comments, and without the negativity.
 
-https://plainhn.com
+https://plainhn.com or https://news.jorilallo.com
 
 Build using:
 
