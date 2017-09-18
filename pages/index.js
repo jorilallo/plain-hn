@@ -14,18 +14,23 @@ import Footer from '../components/Footer';
 import { topStories } from '../lib/hn';
 
 export default class extends React.Component {
+  references = [];
+
   static async getInitialProps({ req }) {
     const stories = await topStories();
     return { stories };
   }
 
   componentDidMount() {
-    if (this.firstDocument) this.firstDocument.focus();
+    if (this.references[0]) this.references[0].focus();
   }
 
-  setFirstDocumentRef = ref => {
-    this.firstDocument = ref;
-    this.firstDocument.focus();
+  setRef = (index, ref) => {
+    this.references[index] = ref;
+  };
+
+  handleMouseOver = index => {
+    this.references[index].focus();
   };
 
   render() {
@@ -45,8 +50,8 @@ export default class extends React.Component {
                     href={story.url}
                     index={index + 1}
                     key={story.id}
-                    innerRef={ref =>
-                      index === 0 && this.setFirstDocumentRef(ref)}
+                    innerRef={ref => this.setRef(index, ref)}
+                    onMouseOver={() => this.handleMouseOver(index)}
                   >
                     {story.title}
                   </Link>
