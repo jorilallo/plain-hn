@@ -29,7 +29,7 @@ export default class MyDocument extends Document {
           />
           <link rel="stylesheet" type="text/css" href="/static/css/fonts.css" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta property="og:title" content="PlainHN" />
+          <meta property="og:title" content="Plain HN" />
           <meta
             property="og:description"
             content="Clean HackerNews without comments"

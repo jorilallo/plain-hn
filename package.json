@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Clean HackerNews without comments",
   "main": "index.js",
-  "repository": "https://github.com/jorilallo/plainhn",
+  "repository": "https://github.com/jorilallo/plain-hn",
   "author": "Jori Lallo <jtlallo@gmail.com>",
   "license": "MIT",
   "scripts": {

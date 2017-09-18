@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { LayoutContainer, LayoutContent, RESPONSIVE_WIDTH } from './Layout';
+import Flex from './Flex';
 import GithubIcon from './GithubIcon';
 
 export default props => {
@@ -7,19 +8,29 @@ export default props => {
   return (
     <LayoutContainer column {...rest}>
       <Content>
-        Plain HN &middot; HackerNews without the negativity &middot; Build
-        by&nbsp;
-        <StyledLink href="https://twitter.com/jorilallo" target="_blank">
-          @jorilallo
-        </StyledLink>
-        &nbsp;&middot;&nbsp;
-        <StyledLink href="https://github.com/jorilallo/plainhn" target="_blank">
-          <StyledGithubIcon />
-        </StyledLink>
+        <Flex>
+          Plain HN &middot; HackerNews without the negativity<Separator />
+        </Flex>
+
+        <Flex>
+          Build by&nbsp;
+          <StyledLink href="https://twitter.com/jorilallo" target="_blank">
+            @jorilallo
+          </StyledLink>
+          <Separator />
+          <StyledLink
+            href="https://github.com/jorilallo/plainhn"
+            target="_blank"
+          >
+            <StyledGithubIcon />
+          </StyledLink>
+        </Flex>
       </Content>
     </LayoutContainer>
   );
 };
+
+const Separator = () => <span>&nbsp;&middot;&nbsp;</span>;
 
 const Content = styled(LayoutContent)`
   padding: 20px 0;
@@ -30,11 +41,16 @@ const Content = styled(LayoutContent)`
     color: #9ea4b3;
   }
 
+  > div {
+    margin-bottom: 12px;
+  }
+
   a:hover {
     text-decoration: underline;
   }
 
   @media (max-width: ${RESPONSIVE_WIDTH}) {
+    flex-direction: column;
     font-size: 12px;
   }
 `;
