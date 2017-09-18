@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'Interface';
+  src: url(/static/fonts/Interface-Regular.woff2);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Interface';
+  src: url(/static/fonts/Interface-Medium.woff2);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Interface';
+  src: url(/static/fonts/Interface-SemiBold.woff2);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Interface';
+  src: url(/static/fonts/Interface-Bold.woff2);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Interface';
+  src: url(/static/fonts/Interface-Italic.woff2);
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Interface';
+  src: url(/static/fonts/Interface-MediumItalic.woff2);
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Interface';
+  src: url(/static/fonts/Interface-SemiBoldItalic.woff2);
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Interface';
+  src: url(/static/fonts/Interface-BoldItalic.woff2);
+  font-weight: 700;
+  font-style: italic;
+}
